@@ -1,8 +1,10 @@
 <template>
-   <h2>hh</h2>
+    <Person/>
 </template>
 
 <script lang="ts" setup>
+  // JS或TS
+  import Person from './components/Person.vue'
   defineOptions({
     name: 'App'
   })
