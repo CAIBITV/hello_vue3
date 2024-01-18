@@ -28,13 +28,8 @@ const router = createRouter({
       children: [
         {
           name: 'xiang',
-          path: 'detail/:id/:title/:content?',
+          path: 'detail',
           component: Detail,
-          // props: true
-          // props: { a: 1, b: 2 }
-          props: (route) => {
-            return route.query
-          }
         }
       ]
     },

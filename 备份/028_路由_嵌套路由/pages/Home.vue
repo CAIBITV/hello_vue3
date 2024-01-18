@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
   defineOptions({
-    name: 'HomeA'
+    name: 'Home'
   })
   import { onMounted, onUnmounted } from 'vue'
   onMounted(() => {

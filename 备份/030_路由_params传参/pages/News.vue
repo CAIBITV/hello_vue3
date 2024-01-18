@@ -11,7 +11,7 @@
             params: {
               id: news.id,
               title: news.title,
-              // content: news.content
+              content: news.content
               // a: [1,2,3]
             }
           }"

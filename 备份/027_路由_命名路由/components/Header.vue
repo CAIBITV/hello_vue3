@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
   defineOptions({
-    name: 'HeaderA'
+    name: 'Header'
   })  
 </script>
 

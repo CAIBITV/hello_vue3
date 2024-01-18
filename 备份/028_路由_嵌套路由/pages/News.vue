@@ -3,21 +3,7 @@
     <!-- 导航区 -->
     <ul>
       <li v-for="news in newsList" :key="news.id">
-        <!-- 第一种写法 -->
-        <!-- <RouterLink :to="`/news/detail/${news.id}/${news.title}/${news.content}`">{{ news.title }}</RouterLink> -->
-        <RouterLink 
-          :to="{
-            name: 'xiang',
-            params: {
-              id: news.id,
-              title: news.title,
-              // content: news.content
-              // a: [1,2,3]
-            }
-          }"
-        >
-          {{ news.title }}
-        </RouterLink>
+        <RouterLink :to="{ path: '/news/detail'}">{{ news.title }}</RouterLink>
       </li>
     </ul>
     <!-- 展示区 -->
@@ -29,7 +15,7 @@
   
 <script setup lang="ts">
   defineOptions({
-    name: 'NewsA'
+    name: 'News'
   })
   import { reactive } from 'vue'
   const newsList = reactive([
@@ -50,11 +36,8 @@
   }
   .news ul {
     margin-top: 30px;
-    /* list-style: none; */
+    list-style: none;
     padding-left: 10px;
-  }
-  .news li::marker {
-    color: #64967E;
   }
   .news li>a {
     font-size: 18px;

@@ -6,7 +6,7 @@
   
 <script setup lang="ts">
   defineOptions({
-    name: 'AboutA'
+    name: 'About'
   })
 </script>
   

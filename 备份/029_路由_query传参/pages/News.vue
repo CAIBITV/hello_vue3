@@ -3,16 +3,18 @@
     <!-- 导航区 -->
     <ul>
       <li v-for="news in newsList" :key="news.id">
+        <!-- 对象中的path属性的参数没有传递过去？？？ -->
+        <!-- <RouterLink :to="{ path: '/news/detail?a=123&b=哈哈&c=嘿嘿'}">{{ news.title }}</RouterLink> -->
         <!-- 第一种写法 -->
-        <!-- <RouterLink :to="`/news/detail/${news.id}/${news.title}/${news.content}`">{{ news.title }}</RouterLink> -->
+        <!-- <RouterLink :to="`/news/detail?id=${news.id}&title=${news.title}&content=${news.content}`">{{ news.title }}</RouterLink> -->
         <RouterLink 
-          :to="{
+          :to="{ 
+            // path: '/news/detail',
             name: 'xiang',
-            params: {
+            query: {
               id: news.id,
               title: news.title,
-              // content: news.content
-              // a: [1,2,3]
+              content: news.content
             }
           }"
         >
