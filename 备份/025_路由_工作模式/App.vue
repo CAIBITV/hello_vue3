@@ -5,7 +5,7 @@
     <div class="navigate">
       <RouterLink to="/home" active-class="active">首页</RouterLink>
       <RouterLink to="/news" active-class="active">新闻</RouterLink>
-      <RouterLink :to="{ path: '/about' }" active-class="active">关于</RouterLink>
+      <RouterLink to="/about" active-class="active">关于</RouterLink>
     </div>
     <!-- 展示区 -->
     <div class="main-content">
