@@ -3,8 +3,7 @@
     <!-- 导航区 -->
     <ul>
       <li v-for="news in newsList" :key="news.id">
-        <!-- 第一种写法 -->
-        <!-- <RouterLink :to="`/news/detail/${news.id}/${news.title}/${news.content}`">{{ news.title }}</RouterLink> -->
+        <button>查看新闻</button>
         <RouterLink 
           :to="{
             name: 'xiang',
