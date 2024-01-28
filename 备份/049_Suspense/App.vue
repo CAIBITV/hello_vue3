@@ -1,8 +1,12 @@
 <template>
   <div class="app">
-    <h3>我是App组件 {{ x }}</h3>
-    <Hello/>
-    <Child/>
+    <h3>我是App组件</h3>
+    <Suspense>
+        <Child/>
+        <template #fallback>
+          <h2>加载中...</h2>
+        </template>
+    </Suspense>
   </div>
 </template>
 
@@ -12,6 +16,7 @@
   })
 
   import Child from './Child.vue'
+  import { Suspense } from 'vue'
 </script>
 
 <style>

@@ -9,7 +9,6 @@ app.component('Hello', Hello)
 
 // 注意：下面的写法 ts 语法不知道具体的类型
 // app.config.globalProperties.x = 99
-export { }
 declare module 'vue' {
     interface ComponentCustomProperties {
       x: number
